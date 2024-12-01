@@ -1,19 +1,21 @@
 package org.example
 
-import kotlin.math.absoluteValue
+import kotlin.math.abs
 
 class Day1(input: String) {
-    private val numsOnly = input.split(Regex("\\s+")).map { it.toInt() }
-    private val leftList = numsOnly.filterIndexed { index, _ -> index % 2 == 0 }.sorted()
-    private val rightList = numsOnly.filterIndexed { index, _ -> index % 2 != 0 }.sorted()
+    private val numberList = input.split(Regex("\\s+")).map { it.toInt() }
+    private val partitioned = numberList.withIndex().partition { it.index % 2 == 0 }
 
     fun part1(): Int {
-        return leftList.mapIndexed { index, num -> (num - rightList[index]).absoluteValue }.sum()
+        return partitioned.let { (leftList, rightList) ->
+            leftList.map { it.value }.sorted() zip rightList.map { it.value }.sorted()
+        }.sumOf { (a, b) -> abs(a - b) }
     }
 
     fun part2(): Int {
-        return leftList.sumOf { leftNum ->
-            leftNum * rightList.filter { rightNum -> rightNum == leftNum }.size
-        }
+        return partitioned.first.map { it.value }
+            .fold(0) { acc, leftNum ->
+                acc + leftNum * partitioned.second.map { it.value }.count { rightNum -> rightNum == leftNum }
+            }
     }
 }
