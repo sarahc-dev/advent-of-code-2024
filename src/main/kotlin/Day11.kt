@@ -44,14 +44,4 @@ class Day11(input: String) {
             }
             else -> listOf((num.toLong() * 2024).toString())
         }
-
-//    fun part2(): Int {
-//        var total = 0
-//        for ((index, row) in map.withIndex()) {
-//            for ((col, num) in row.withIndex()) {
-//                if (num == '0') total += getRating(Pair(index, col))
-//            }
-//        }
-//        return total
-//    }
 }
