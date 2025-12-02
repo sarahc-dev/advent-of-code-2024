@@ -1,4 +1,6 @@
-import org.example.Day2
+package aoc2024
+
+import org.example.aoc2024.Day2
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -32,5 +34,5 @@ class Day2Test {
          1 3 6 7 9
         """.trimIndent()
 
-    private val puzzleInput = ClassLoader.getSystemResource("Day2Input.txt").readText()
+    private val puzzleInput = ClassLoader.getSystemResource("25Day2Input.txt").readText()
 }

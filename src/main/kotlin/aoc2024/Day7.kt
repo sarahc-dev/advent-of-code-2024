@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day7(input: String) {
     private val equations = input.split("\n").map { line -> line.split(": ") }.map { values ->

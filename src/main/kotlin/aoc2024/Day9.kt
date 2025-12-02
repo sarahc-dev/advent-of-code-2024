@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day9(val input: String) {
     fun part1(): Long {

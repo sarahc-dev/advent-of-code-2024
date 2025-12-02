@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day11(input: String) {
     private val inputList = input.split(" ")

@@ -1,4 +1,6 @@
-import org.example.Day7
+package aoc2024
+
+import org.example.aoc2024.Day7
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

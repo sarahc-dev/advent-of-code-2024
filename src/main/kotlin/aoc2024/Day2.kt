@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day2(input: String) {
     private val reports = input.split("\n").map { report -> report.split(" ").map { it.toInt()} }

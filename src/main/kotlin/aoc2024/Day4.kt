@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day4(input: String) {
     private val lines = input.split("\n")

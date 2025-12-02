@@ -1,4 +1,4 @@
-package org.example
+package org.example.aoc2024
 
 class Day10(input: String) {
     private val map = input.lines()
