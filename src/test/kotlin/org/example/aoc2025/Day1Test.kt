@@ -1,6 +1,5 @@
-package aoc2025
+package org.example.aoc2025
 
-import org.example.aoc2025.Day1
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
